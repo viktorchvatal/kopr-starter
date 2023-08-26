@@ -1,0 +1,12 @@
+version: "3.6"
+
+services:
+  vig-toolbox:
+    image: "kopr:1.0.0"
+    container_name: kopr
+    network_mode: host
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /home/vchvatal/.Xauthority:/home/kopr/.Xauthority
